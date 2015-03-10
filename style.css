@@ -1,1 +1,51 @@
 /* open.ashannon.us style */
+
+/* general overrides */
+a:link { color: #000000; }
+a:visited { color: #000000; }
+a:hover { color: #000000; }
+a:active { color: #000000; }
+
+body {
+    background-color: #FFFFFA;
+}
+
+ul {
+    line-height: 150%;
+}
+
+/* common classes */
+.black, a.black {
+    color: #000;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+nav {
+    border-bottom: 1px solid #000;
+}
+
+nav h1 {
+    font-family: helvetica;
+}
+
+section {
+    margin-left: 10%;
+    width: 80%;
+}
+
+section article {
+    border-bottom: 1px dashed #000;
+    margin-bottom: 25px;
+}
+
+section article h3 {
+    font-family: helvetica;
+    font-weight: bold;
+}
+
+section article p {
+    font-family: Arial;
+}
