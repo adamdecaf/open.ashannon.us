@@ -30,7 +30,7 @@ function upload_html() {
 function upload_css() {
     BASE=$1
     WHERE=$2
-    aws s3 cp --exclude ".git/*" --content-encoding gzip $BASE*css s3://open.ashannon.us/$WHERE
+    aws s3 cp --exclude ".git/*" $BASE*css s3://open.ashannon.us/$WHERE
 }
 
 
