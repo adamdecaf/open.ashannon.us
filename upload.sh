@@ -1,5 +1,16 @@
 #!/bin/bash
 
+function just_upload() {
+    WHERE=$1
+    if [[ -f $WHERE ]];
+    then
+        aws s3 cp --exclude ".git/*" $WHERE s3://open.ashannon.us/$WHERE
+    else
+        echo "File: $WHERE not found"
+        exit 1
+    fi
+}
+
 function upload_gzip() {
     PATTERN=$1
     WHERE=$2
@@ -37,3 +48,6 @@ function upload_css() {
 # Upload main site files
 upload_html
 upload_css
+
+# Data
+just_upload "nfl-data/nfl-data.tar.bz2"
