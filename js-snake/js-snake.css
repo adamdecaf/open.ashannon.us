@@ -1,0 +1,45 @@
+/**
+ * JS-Snake
+ * Adam Shannon
+ */
+
+a {
+    color: #000;
+}
+
+body {
+    background-color: #CCC;
+}
+
+canvas#arena {
+    background-color: #FFF;
+    border: 1px solid #000;
+    height: 500px;
+    width: 1000px;
+}
+
+div#target_legend {
+    background-color: #FFF;
+    border: 1px solid #000;
+    border-radius: 5px;
+    float:right;
+    max-width: 200px;
+    padding: 10px;
+}
+
+div#target_legend h3 {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: underline;
+}
+
+iframe {
+    background-color: #FFF;
+    height: 500px;
+    width: 1000px;
+}
+
+table {
+    text-align: center;
+    width: 100%;
+}
