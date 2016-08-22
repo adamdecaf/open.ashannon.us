@@ -4,7 +4,7 @@ function just_upload() {
     WHERE=$1
     if [[ -f $WHERE ]];
     then
-        aws s3 cp --exclude ".git/*" $WHERE s3://open.ashannon.us/$WHERE
+        aws-personal s3 cp --exclude ".git/*" $WHERE s3://open.ashannon.us/$WHERE
     else
         echo "File: $WHERE not found"
         exit 1
@@ -16,7 +16,7 @@ function upload_gzip() {
     WHERE=$2
 
     gzip $PATTERN
-    aws s3 cp --exclude ".git/*" --content-encoding gzip $PATTERN.gz s3://open.ashannon.us/$WHERE
+    aws-personal s3 cp --exclude ".git/*" --content-encoding gzip $PATTERN.gz s3://open.ashannon.us/$WHERE
 }
 
 function uncompress_files() {
@@ -41,7 +41,7 @@ function upload_html() {
 function upload_css() {
     BASE=$1
     WHERE=$2
-    aws s3 cp --exclude ".git/*" $BASE*css s3://open.ashannon.us/$WHERE
+    aws-personal s3 cp --exclude ".git/*" $BASE*css s3://open.ashannon.us/$WHERE
 }
 
 
